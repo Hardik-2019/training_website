@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form > *{
+            margin-top: 10px;
+            border-radius: .5rem;
+        }
+        .content{
+            padding: 20px;
+            background-color: lavender;
+            color: purple;
+            border-radius: 1rem;
+        }
+        label{
+            font-weight: bold;
+            margin-right: 20px;
+        }
+        #btn{
+            border: solid 2px purple;
+            background-color: lavender;
+            color: purple;
+        }
+    </style>
+    <style>
+        body{
+            color: purple;
+        }
+    </style>
+    <script>
+        function func1(){
+            alert("Your records have been submitted");
+        }
+    </script>
+</head>
+<body>
+    <section id="register">
+        <h2 >Registration Page</h2><br>
+        <div class="content" style="display:flex;justify-content:center;align-items:center">
+            <form onsubmit="return func1()">
+            <table>
+                <tr>
+                    <td><label>Name</label></td>
+                    <td><input type="text" placeholder="Your Name Here" required></td>
+                </tr>
+                <tr>
+                    <td><label>Gender</label></td>
+                    <td>Male<input type="radio" placeholder="Your Name Here" name="gender">
+                    Female<input type="radio" placeholder="Your Name Here" name="gender"></td>
+                </tr>
+                <tr>
+                    <td><label>Email</label></td>
+                    <td><input type="email" placeholder="Your Email Here" required></td>
+                </tr>
+                <tr>
+                    <td><label>Location</label></td>
+                    <td><select type="select" placeholder="Your Location Here">
+                    <option>Mumbai</option>
+                    <option>Pune</option>
+                    <option>Bangalore</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><label>Software Knowledge</label></td>
+                    <td>Angular<input type="checkbox" placeholder="Your Name Here" name="angular">
+                    React<input type="checkbox" placeholder="Your Name Here" name="react">
+                    Vue<input type="checkbox" placeholder="Your Name Here" name="vue"></td>
+                </tr>
+                <tr style="display: flex;align-items: center;">
+                    <td><label>Reamrks</label></td>
+                    <td><textarea type="text" style="border-radius: .5rem;" placeholder="Your Name Here"></textarea></td>
+                </tr>
+            </table>
+                <input id="btn" type="submit">
+            </form>
+        </div>
+    </section>
+</body>
+</html>

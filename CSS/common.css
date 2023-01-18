@@ -1,0 +1,21 @@
+li{
+    display:inline-block;
+    margin-right: 10px;
+}
+#header{
+    
+    height:30vh;
+    width:100%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navanch{
+    text-decoration:none;
+    color:purple
+}
+.navanch:hover, .navanch:active{
+    font-weight: bolder;
+    font-size: larger;
+}

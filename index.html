@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Virtual Class</title>
+    <link rel="stylesheet" href="CSS/common.css">
+    <style>
+        .box {
+		margin: 50px;
+        width:153px;
+        height:103px;
+        /* background: url("2.jpg"); */
+        background-color:lavender;
+        position: relative;
+        animation-name: moveit;
+        animation-duration: 2s;
+        }
+        @keyframes moveit {
+            from {left: -50%;}
+            to   {left: -10%;}
+        }
+    </style>
+</head>
+<body>
+    <header class="box" id="header" >
+        <!-- <img src="Images/live_virtual_class.jpeg" alt="Not Loading"> -->
+        <!-- <h1 style="color:white">Live Virtual Class</h1> -->
+        <canvas id="myCanvas" width="300" height="100" style="border:15px solid #d3d3d3;">
+            Your browser does not support the HTML5 canvas tag.</canvas>
+            <script>
+                var c=document.getElementById("myCanvas");
+                var ctx=c.getContext("2d");
+                ctx.font="30px Arial";
+                ctx.strokeText("Live Virtual Class",20,90);
+            </script>
+        <!-- <h1 style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);">Live Virtual Class</h1>     -->
+    </header>
+    <nav style="border: 2px solid purple;border-bottom-left-radius: 1rem;border-bottom-right-radius: 1rem;">
+        <ul style="display:flex; justify-content:space-around">
+            <li><a class="navanch" href="home.html" target="frm1">Home</a></li>&nbsp;
+            <li><a class="navanch" href="allcourses.html" target="frm1">All Courses</a>&nbsp;
+            <li><a class="navanch" href="register.html" target="frm1">Registration</a></li>&nbsp;
+            <li><a class="navanch" href="photogallery.html" target="frm1">Photo Gallery</a></li>&nbsp;
+            <li><a class="navanch" href="aboutus.html" target="frm1">About Us</a></li>&nbsp;
+            <li><a class="navanch" href="blogs.html" target="frm1">Blogs</a></li>&nbsp;
+            <li><a class="navanch" href="contactus.html"target="frm1">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <iframe name="frm1" src="home.html" style="width:95%;height:80vh;border: none; margin-left: 5%; margin-top: 5%;"></iframe>
+    <!-- <iframe name="frm2" src="allcourses.html"></iframe> -->
+
+    <footer style="position: fixed;bottom: 0%;background-color: lavender;color: purple;width:100% ;padding:1%;text-align: center;">
+        <div style="margin-bottom: 10px;">Most important courses to be published
+            <span style="border: solid 1px purple; padding: 5px;">MEAN</span>
+            <span style="border: solid 1px purple; padding: 5px;">MERN</span>
+            <span style="border: solid 1px purple; padding: 5px;">Dev Ops</span>
+        </div>
+        <div>Designed & Developed By: Hardik Garg</div>
+    </footer>
+
+</body>
+</html>
