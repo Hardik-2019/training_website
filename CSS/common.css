@@ -3,7 +3,7 @@ li{
     margin-right: 10px;
 }
 #header{
-    
+    background: repeating-linear-gradient(white 10%, lavender 40%, white 70%);
     height:30vh;
     width:100%;
     background-repeat: no-repeat;

@@ -13,17 +13,20 @@
         /* background: url("2.jpg"); */
         background-color:lavender;
         position: relative;
-        animation-name: moveit;
-        animation-duration: 2s;
+        
         }
-        @keyframes moveit {
-            from {left: -50%;}
-            to   {left: -10%;}
+        .animi{
+            animation-name: moveit;
+            animation-duration: 2s;
+        }
+        @keyframes moveit{
+            from {left: 0%;}
+            to   {left: 10%;}
         }
     </style>
 </head>
 <body>
-    <header class="box" id="header" >
+    <header id="header" >
         <!-- <img src="Images/live_virtual_class.jpeg" alt="Not Loading"> -->
         <!-- <h1 style="color:white">Live Virtual Class</h1> -->
         <canvas id="myCanvas" width="300" height="100" style="border:15px solid #d3d3d3;">
@@ -37,7 +40,7 @@
         <!-- <h1 style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);">Live Virtual Class</h1>     -->
     </header>
     <nav style="border: 2px solid purple;border-bottom-left-radius: 1rem;border-bottom-right-radius: 1rem;">
-        <ul style="display:flex; justify-content:space-around">
+        <ul class="anime" style="display:flex; justify-content:space-around">
             <li><a class="navanch" href="home.html" target="frm1">Home</a></li>&nbsp;
             <li><a class="navanch" href="allcourses.html" target="frm1">All Courses</a>&nbsp;
             <li><a class="navanch" href="register.html" target="frm1">Registration</a></li>&nbsp;
@@ -48,7 +51,7 @@
         </ul>
     </nav>
 
-    <iframe name="frm1" src="home.html" style="width:95%;height:80vh;border: none; margin-left: 5%; margin-top: 5%;"></iframe>
+    <iframe class="animi" name="frm1" src="home.html" style="width:95%;height:80vh;border: none; margin-left: 5%; margin-top: 5%;"></iframe>
     <!-- <iframe name="frm2" src="allcourses.html"></iframe> -->
 
     <footer style="position: fixed;bottom: 0%;background-color: lavender;color: purple;width:100% ;padding:1%;text-align: center;">
