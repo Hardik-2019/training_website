@@ -31,8 +31,36 @@
         }
     </style>
     <script>
-        function func1(){
-            alert("Your records have been submitted");
+        // function func1(){
+        //     alert("Your records have been submitted");
+        // }
+        function func2(){
+            if(frm1.name.value==""){
+                alert("name required");
+                frm1.name.focus();
+            }
+        }
+        function func(){
+            if(frm1.email.value=="" || frm1.name.value==""){
+                alert("Name and Email are required")
+                if(frm1.email.value==""){
+                    frm1.email.focus();
+                }
+                else if(frm1.name.value=""){
+                    frm1.name.focus();
+                }
+            }
+            else{
+                alert(
+                    `Selected Values are:
+                    Name: ${frm1.name.value}
+                    Gender: ${frm1.gender.value}
+                    Email: ${frm1.email.value}
+                    Location: ${frm1.location.value}
+                    Software Knowledge: ${frm1.sk.value}
+                    Remarks: ${frm1.remarks.value}`
+                )
+            }
         }
     </script>
 </head>
@@ -40,41 +68,41 @@
     <section id="register">
         <h2 >Registration Page</h2><br>
         <div class="content" style="display:flex;justify-content:center;align-items:center">
-            <form onsubmit="return func1()">
+            <form name="frm1" action="thanks.html">
             <table>
                 <tr>
                     <td><label>Name</label></td>
-                    <td><input type="text" placeholder="Your Name Here" required></td>
+                    <td><input type="text" placeholder="Your Name Here" name="name"></td>
                 </tr>
                 <tr>
                     <td><label>Gender</label></td>
-                    <td>Male<input type="radio" placeholder="Your Name Here" name="gender">
-                    Female<input type="radio" placeholder="Your Name Here" name="gender"></td>
+                    <td>Male<input type="radio" placeholder="Your Name Here" name="gender" value="male"> 
+                    Female<input type="radio" placeholder="Your Name Here" name="gender" value="female"></td>
                 </tr>
                 <tr>
                     <td><label>Email</label></td>
-                    <td><input type="email" placeholder="Your Email Here" required></td>
+                    <td><input type="email" name="email" placeholder="Your Email Here"></td>
                 </tr>
                 <tr>
                     <td><label>Location</label></td>
-                    <td><select type="select" placeholder="Your Location Here">
-                    <option>Mumbai</option>
-                    <option>Pune</option>
-                    <option>Bangalore</option>
+                    <td><select type="select" placeholder="Your Location Here" name="location">
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Pune">Pune</option>
+                    <option value="Bangalore">Bangalore</option>
                     </select></td>
                 </tr>
                 <tr>
                     <td><label>Software Knowledge</label></td>
-                    <td>Angular<input type="checkbox" placeholder="Your Name Here" name="angular">
-                    React<input type="checkbox" placeholder="Your Name Here" name="react">
-                    Vue<input type="checkbox" placeholder="Your Name Here" name="vue"></td>
+                    <td>Angular<input type="checkbox" placeholder="Your Name Here" name="sk" value="angular">
+                    React<input type="checkbox" placeholder="Your Name Here"  name="sk" value="react">
+                    Vue<input type="checkbox" placeholder="Your Name Here" name="sk" value="vue"></td>
                 </tr>
                 <tr style="display: flex;align-items: center;">
                     <td><label>Reamrks</label></td>
-                    <td><textarea type="text" style="border-radius: .5rem;" placeholder="Your Name Here"></textarea></td>
+                    <td><textarea type="text" style="border-radius: .5rem;" placeholder="Your Name Here" name="remarks"></textarea></td>
                 </tr>
             </table>
-                <input id="btn" type="submit">
+                <input id="btn" onclick="func()" type="submit">
             </form>
         </div>
     </section>

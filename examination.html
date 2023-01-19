@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function func1(){
+            var marks = 0;
+            if(frm1.q1.value=='a' && frm1.q2.value=='b'){
+                document.getElementById("ans").innerHTML = "Total Marks = 4";
+            }
+            else if(frm1.q1.value=='a' || frm1.q2.value=='b'){
+                document.getElementById("ans").innerHTML = "Total Marks = 2";
+            }
+            else{
+                document.getElementById("ans").innerHTML = "Total Marks = 0";
+            }
+            frm1.q1.style
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <form name="frm1">
+            <div>Q1 JS is</div>
+            <input type="radio" name="q1" value="a"><span>Used for making dynamic pages</span><br>
+            <input type="radio" name="q1" value="b"><span>Used for making static pages</span><br>
+            <input type="radio" name="q1" value="c"><span>all</span><br>
+            <input type="radio" name="q1" value="d"><span>none</span><br>
+            <br><br>
+            <div>Q2 NodeJS is used for</div>
+            <input type="radio" name="q2" value="a"><span>Used for making client side application</span><br>
+            <input type="radio" name="q2" value="b"><span>Used for making server side application</span><br>
+            <input type="radio" name="q2" value="c"><span>all</span><br>
+            <input type="radio" name="q2" value="d"><span>none</span><br>
+            <input type="button" value="submit test" onclick="func1()">
+        </form>
+        <div id="ans"></div>
+    </div>
+</body>
+</html>
