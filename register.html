@@ -49,6 +49,7 @@
                 else if(frm1.name.value=""){
                     frm1.name.focus();
                 }
+                return false;
             }
             else{
                 alert(
@@ -60,6 +61,7 @@
                     Software Knowledge: ${frm1.sk.value}
                     Remarks: ${frm1.remarks.value}`
                 )
+                return true;
             }
         }
     </script>
@@ -68,7 +70,7 @@
     <section id="register">
         <h2 >Registration Page</h2><br>
         <div class="content" style="display:flex;justify-content:center;align-items:center">
-            <form name="frm1" action="thanks.html">
+            <form name="frm1" onsubmit=" return func()" action="thanks.html">
             <table>
                 <tr>
                     <td><label>Name</label></td>
@@ -102,7 +104,7 @@
                     <td><textarea type="text" style="border-radius: .5rem;" placeholder="Your Name Here" name="remarks"></textarea></td>
                 </tr>
             </table>
-                <input id="btn" onclick="func()" type="submit">
+                <input id="btn" type="submit">
             </form>
         </div>
     </section>
