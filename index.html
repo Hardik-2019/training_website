@@ -35,13 +35,60 @@
             from {left: 0%;}
             to   {left: 10%;}
         }
+        .typewriter h1 {
+            /* width:50%; */
+            color: purple;
+            /* font-size: px; */
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%,-50%);
+        z-index: 10;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .15em solid lavender; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em; /* Adjust as needed */
+        animation: 
+            typing 3.5s steps(40, end),
+            blink-caret .75s step-end infinite;
+        }
+
+        /* The typing effect */
+        @keyframes typing {
+        from { width: 0 }
+        to { width: 30% }
+        }
+
+        /* The typewriter cursor effect */
+        @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: purple; }
+        }
+        .sub{
+            position: absolute;
+            color: purple;
+            z-index: 10;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .sub:hover{
+            color: purple;
+            font-size: larger;
+        }
     </style>
 </head>
-<body onload="subscribe()">
+<!-- <body onload="subscribe()"> -->
+    <body>
     <header>
         <!-- <img src="Images/live_virtual_class.jpeg" alt="Not Loading"> -->
         <!-- <h1 style="color:white">Live Virtual Class</h1> -->
-        <h1 style="position: absolute;top:35vh;left:40%;z-index: 10; color:purple; border: solid 10px lavender; padding: 2%;">Live Virtual Class</h1>
+        <!-- <h1 style="position: absolute;top:35vh;left:40%;z-index: 10; color:purple; font-size: 70px;">Live Virtual Class</h1> -->
+        <div class="typewriter">
+            <h1>Live Virtual Class</h1>
+        </div>
+        <a class="sub" href="#ifrm"> Explore More</a>
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -78,10 +125,10 @@
             </script> -->
         <!-- <h1 style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);">Live Virtual Class</h1>     -->
     </header>
-    <nav style="border: 2px solid purple;border-bottom-left-radius: 1rem;border-bottom-right-radius: 1rem;">
+    <!-- <nav style="border: 2px solid purple;border-bottom-left-radius: 1rem;border-bottom-right-radius: 1rem;">
         <ul class="anime" style="display:flex; justify-content:space-around; align-items: center;">
             <li><a class="navanch" href="home.html" target="frm1">Home</a></li>&nbsp;
-            <!-- <li><a class="navanch" href="allcourses.html" target="frm1">All Courses</a>&nbsp; -->
+            <li><a class="navanch" href="allcourses.html" target="frm1">All Courses</a>&nbsp;
             <li class="nav-item dropdown">
                 <a class="navanch nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     All Courses
@@ -98,18 +145,85 @@
             <li><a class="navanch" href="blogs.html" target="frm1">Blogs</a></li>&nbsp;
             <li><a class="navanch" href="contactus.html"target="frm1">Contact Us</a></li>
         </ul>
-    </nav>
+    </nav> -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active navanch" aria-current="page" href="home.html" target="frm1">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link navanch dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  All Courses
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">MEAN</a></li>
+                  <li><a class="dropdown-item" href="#">MERN</a></li>
+                  <li><a class="dropdown-item" href="#">Dev Ops</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active navanch" aria-current="page"  href="register.html" target="frm1">Registration</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active navanch" aria-current="page" href="photogallery.html" target="frm1">Photo Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active navanch" aria-current="page" href="aboutus.html" target="frm1">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active navanch" aria-current="page" href="blogs.html" target="frm1">Blogs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active navanch" aria-current="page" href="contactus.html" target="frm1">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
-    <iframe class="animi" name="frm1" src="home.html" style="width:95%;height:80vh;border: none; margin-left: 5%; margin-top: 5%;"></iframe>
+    <iframe id="ifrm" class="animi" name="frm1" src="home.html" style="width:95%;height:80vh;border: none; margin-left: 5%; margin-top: 5%;"></iframe>
     <!-- <iframe name="frm2" src="allcourses.html"></iframe> -->
 
     <footer style="position: fixed;bottom: 0%;background-color: lavender;color: purple;width:100% ;padding:1%;text-align: center;">
         <div style="margin-bottom: 10px;">Most important courses to be published
-            <span style="border: solid 1px purple; padding: 5px;">MEAN</span>
-            <span style="border: solid 1px purple; padding: 5px;">MERN</span>
-            <span style="border: solid 1px purple; padding: 5px;">Dev Ops</span>
+            <span style="border: solid 1px purple; padding: 5px;"><a class="navanch" data-bs-toggle="collapse" href="#mean" role="button" aria-expanded="false" aria-controls="collapseExample">MEAN</a></span>
+            <span style="border: solid 1px purple; padding: 5px;"><a class="navanch" data-bs-toggle="collapse" href="#mern" role="button" aria-expanded="false" aria-controls="collapseExample">MERN</a></span>
+            <span style="border: solid 1px purple; padding: 5px;"><a class="navanch" data-bs-toggle="collapse" href="#devops" role="button" aria-expanded="false" aria-controls="collapseExample">Dev Ops</a></span>
         </div>
+        <div class="collapse" id="mean">
+            <div class="card card-body">
+                MEAN Stack is one of the most popular Technology Stack. It is used to develop a Full Stack Web Application. Although it is a Stack of different technologies, all of these are based on JavaScript language.
+            </div>
+          </div>
+          <div class="collapse" id="mern">
+            <div class="card card-body">
+              MERN Stack is a Javascript Stack that is used for easier and faster deployment of full-stack web applications. MERN Stack comprises of 4 technologies namely: MongoDB, Express, React and Node.js. It is designed to make the development process smoother and easier.
+            </div>
+          </div>
+          <div class="collapse" id="devops">
+            <div class="card card-body">
+                DevOps is a set of practices, tools, and a cultural philosophy that automate and integrate the processes between software development and IT teams. It emphasizes team empowerment, cross-team communication and collaboration, and technology automation.
+            </div>
+          </div>
         <div>Designed & Developed By: Hardik Garg</div>
+        <ul>
+            <li class="nav-item dropdown">
+                <a class="nav-link navanch dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Reference Websites
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="https://w3schools.com">W3 Schools</a></li>
+                  <li><a class="dropdown-item" href="https://getbootstrap.com/">Bootstrap</a></li>
+                  <!-- <li><hr class="dropdown-divider"></li> -->
+                  <li><a class="dropdown-item" href="https://css-tricks.com/">CSS Tricks</a></li>
+                </ul>
+              </li>
+        </ul>
     </footer>
 
 </body>
